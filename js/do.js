@@ -1,19 +1,25 @@
-var t = null,
+var a = null,
 
-	wait = function() {
+	b = function() {
 
-		t = setTimeout(function () {
+		a = setTimeout(function () {
 
-			window.location = window.location.href.split("auto" + "focus>")[0] + "auto" + "focus>" + document.getElementById("ntpd").value + "</textarea>";
+			d();
 
-		}, 750);
+		}, 1000);
 
 	},
 
-	ntpDo = function () {
+	c = function () { // function called by onKeyUp
 
-		clearTimeout(t);
+		clearTimeout(a);
 
-		wait();
+		b();
+
+	},
+
+	d = function () {
+
+		window.location = window.location.href.split('auto' + 'focus>')[0] + 'auto' + 'focus>' + document.getElementById('ntpd').value + '</textarea>';
 
 	};
